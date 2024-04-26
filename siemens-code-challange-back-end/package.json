@@ -5,7 +5,7 @@
   "main": "index.js",
   "module": "json",
   "scripts": {
-    "dev": "nodemon index.ts - --resolveJsonModule",
+    "dev": "nodemon api/index.ts - --resolveJsonModule",
     "start": "node dist/index.js",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"

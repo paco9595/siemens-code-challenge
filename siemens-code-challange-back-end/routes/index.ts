@@ -1,7 +1,7 @@
 import express from 'express'
 import templateRouter from './templates'
 import cors  from 'cors'
-import path from 'path'
+import path from 'node:path'
 const app = express()
 
 app.use(cors())

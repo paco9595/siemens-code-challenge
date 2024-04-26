@@ -1,6 +1,6 @@
 
 import dotenv from 'dotenv';
-import app from './routes';
+import app from '../routes';
 
 //For env File 
 dotenv.config();
