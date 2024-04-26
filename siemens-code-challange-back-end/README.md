@@ -46,7 +46,7 @@ This endpoint retrieves an array of images stored on the server. You can send pa
 
 #### Example Request
 ```
-GET /api/image?id=123
+GET /api/image?page=3&per_page=4
 ```
 
 ### `GET /images/large/7111-b.jpg`
