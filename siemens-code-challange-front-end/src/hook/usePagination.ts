@@ -8,13 +8,13 @@ export default function usePagination<T>(url: string, { per_page, defaultPage } 
   const [data, setData] = useState<T[]>([]);
   useEffect(() => {
     const fetchData = async () => {
-      const { data, count:countData } = await fetch(`${url}?page=${page}&per_page=${per_page}`).then((res) => res.json());
+      const { data, count: countData } = await fetch(`${url}?page=${page}&per_page=${per_page}`).then((res) => res.json());
       setData(data);
       const lastPage = (countData - (countData % per_page)) / per_page + 1
-      
+
       if (page === lastPage) {
         setIsLastPage(true)
-      }else {
+      } else {
         setIsLastPage(false)
       }
     };
@@ -42,6 +42,7 @@ export default function usePagination<T>(url: string, { per_page, defaultPage } 
   };
 
   return {
+    isFirstPage: page === 1,
     isLastPage,
     isLoading,
     page,
