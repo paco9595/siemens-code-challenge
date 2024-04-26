@@ -1,0 +1,29 @@
+{
+  "name": "siemens-code-challange-back-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "module": "json",
+  "scripts": {
+    "dev": "nodemon index.ts - --resolveJsonModule",
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "epress": "^0.0.1-security",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "nodemon": "^3.1.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  }
+}
