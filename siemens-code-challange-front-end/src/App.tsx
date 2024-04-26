@@ -8,7 +8,7 @@ import Thumbnail from "./components/thumbnails";
 function App() {
   const [selectedImage, setSelectedImage] = useState<ThumbnailImage>({} as ThumbnailImage);
   const { data, isLastPage, isFirstPage, next, previous } = usePagination<ThumbnailImage>(
-    `${process.env.API_BASE_URL}/v1/templates`
+    `${process.env.API_BASE_URL}/api/images`
   );
   useEffect(() => {
     if (data.length && !selectedImage.id) {
@@ -20,7 +20,6 @@ function App() {
     <>
       <div id="container">
        <LargeImage selectedImage={selectedImage}/>
-
         <Thumbnail
           images={data}
           isFirstPage={isFirstPage}
